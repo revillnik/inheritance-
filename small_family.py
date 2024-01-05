@@ -23,3 +23,4 @@ class Dogs(Animals):
 vas = Cats()
 vas.give_name("Пуська")
 vas.get_name()
+print(isinstance(vas, Animals))
