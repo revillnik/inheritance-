@@ -26,11 +26,15 @@ class Logs:
     id = 0
 
     def __init__(self):
-        self.ID = Logs.id
-        Logs.id += 1
+        self.ID = self.id
+        self.raise_id()
 
     def get_ID(self):
         return self.ID
+
+    @classmethod
+    def raise_id(cls):
+        cls.id += 1
 
 
 class Notebooks(Goods, Logs):
@@ -40,5 +44,7 @@ class Notebooks(Goods, Logs):
 
 hp = Notebooks("hp", 50000)
 lenovo = Notebooks("lenovo", 40000)
+sd = Notebooks("sd", 40000)
 hp.get_info()
 lenovo.get_info()
+sd.get_info()
